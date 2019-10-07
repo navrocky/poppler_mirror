@@ -37,7 +37,7 @@ environment:
     matrix:
     - TARGET: windows-mingw_64-gcc
 #    - TARGET: windows-msvc2017_64-cl
-    APPVEYOR_RDP_PASSWORD: 123456
+    APPVEYOR_RDP_PASSWORD: Thuk3zee
 
 artifacts:
   - path: poppler-master-*-master-windows-mingw_64-gcc.7z
