@@ -33,5 +33,10 @@ test_script:
 
 environment:
     matrix:
-    - TARGET: windows-mingw_64-gcc
-    - TARGET: windows-msvc2017_64-cl
+    - TARGET: windows-mingw_32-gcc
+#    - TARGET: windows-msvc2017_64-cl
+
+artifacts:
+  - path: C:\CraftMaster\windows-mingw_32-gcc\tmp\poppler-master-1-master-windows-mingw_32-gcc.7z
+    name: poppler-libs
+    
