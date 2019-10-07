@@ -29,6 +29,7 @@ after_build:
 test_script:
 - ps: |
    craft --src-dir $env:APPVEYOR_BUILD_FOLDER --test poppler
+   & cmd /C "cp c:\\CraftMaster\\windows-mingw_64-gcc\\tmp\\poppler-master-*-master-windows-mingw_64-gcc.7z C:\\projects\\poppler-mirror\\"
 
 
 environment:
@@ -37,6 +38,6 @@ environment:
 #    - TARGET: windows-msvc2017_64-cl
 
 artifacts:
-  - path: ..\..\CraftMaster\windows-mingw_64-gcc\tmp\poppler-master-*-master-windows-mingw_64-gcc.7z
+  - path: poppler-master-*-master-windows-mingw_64-gcc.7z
     name: poppler-libs
     
