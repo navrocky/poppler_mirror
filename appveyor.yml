@@ -9,6 +9,7 @@ init:
         & C:\python36\python.exe "C:\CraftMaster\CraftMaster\CraftMaster.py" --config "$env:APPVEYOR_BUILD_FOLDER\appveyor.ini" --variables "APPVEYOR_BUILD_FOLDER=$env:APPVEYOR_BUILD_FOLDER" --target $env:TARGET -c $args
         if($LASTEXITCODE -ne 0) {exit $LASTEXITCODE}
     }
+- ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 
 install:
 - ps: |
@@ -36,6 +37,7 @@ environment:
     matrix:
     - TARGET: windows-mingw_64-gcc
 #    - TARGET: windows-msvc2017_64-cl
+    APPVEYOR_RDP_PASSWORD: 123456
 
 artifacts:
   - path: poppler-master-*-master-windows-mingw_64-gcc.7z
