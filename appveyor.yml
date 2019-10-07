@@ -37,6 +37,6 @@ environment:
 #    - TARGET: windows-msvc2017_64-cl
 
 artifacts:
-  - path: C:\CraftMaster\windows-mingw_64-gcc\tmp\poppler-master-1-master-windows-mingw_64-gcc.7z
+  - path: ..\..\CraftMaster\windows-mingw_64-gcc\tmp\poppler-master-*-master-windows-mingw_64-gcc.7z
     name: poppler-libs
     
