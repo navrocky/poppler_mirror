@@ -30,7 +30,7 @@ after_build:
 test_script:
 - ps: |
    craft --src-dir $env:APPVEYOR_BUILD_FOLDER --test poppler
-   & cmd /C "cp c:\\CraftMaster\\windows-mingw_64-gcc\\tmp\\poppler-master-*-master-windows-mingw_64-gcc.7z C:\\projects\\poppler-mirror\\"
+   & cmd /C "copy C:\CraftMaster\windows-mingw_64-gcc\tmp\poppler-master-*-master-windows-mingw_64-gcc.7z C:\projects\poppler-mirror\"
 
 
 environment:
